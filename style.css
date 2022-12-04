@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  -bg--color: #ffffff;
+  --bg-card-primary: #e1e1e6;
+  --bg-card-active: #e3c7de;
+  --svg-fill-primary: #323238;
+  --svg-fill-active:#a62e866f;
+}
+
+body {
+  background-color: var(-bg--color);
+  min-height: 100vh;
+
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 12.6rem;
+
+  display: grid;
+}
+
+main {
+  width: 82.1rem;
+  height: 33.6rem;
+  background-color: var (-bg--color);
+
+  display: flex;
+
+  align-self: center;
+  justify-self: center;
+}
+
+main .timerAndControls {
+  margin-right: 19.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.timerAndControls .timer {
+  width: 32.1rem;
+  height: 14.8rem;
+  margin-top: 5.8rem;
+}
+
+.timerAndControls .controls {
+  display: flex;
+  gap: 4rem;
+  margin-top: 1.7rem;
+}
+
+.hide {
+  display: none;
+}
+
+main .controls button {
+  background-color: transparent;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+.timerAndControls .soundCards {
+  display: grid;
+  gap: 3.2rem;
+
+  grid-template-areas:
+    "forest rain"
+    "coffee fp";
+}
+
+.soundCards button {
+  background-color: var(--bg-card-primary);
+  width: 13.8rem;
+  height: 15.2rem;
+  border-radius: 2.4rem;
+
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.soundCards button.active {
+  background-color: var(--bg-card-active);
+
+}
+
+.color {
+  fill: var(--svg-fill-active)
+}
+
+.soundCards svg {
+  fill: var(--svg-fill-primary);
+}
+
+.soundCards button:hover {
+  scale: 1.1;
+}
+
+.soundCards path:hover {
+  transition: 0.6s;
+}
+
+.soundCards .rain path:hover {
+  fill: rgb(21, 21, 198);
+}
+
+.soundCards .forest path:hover {
+  fill: rgb(29, 172, 13);
+}
+
+.soundCards .coffee path:hover {
+  fill: rgb(241, 36, 169);
+}
+
+.soundCards .fp path:hover {
+  fill: rgb(255, 149, 0);
+}
